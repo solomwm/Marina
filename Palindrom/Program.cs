@@ -14,8 +14,8 @@ namespace Palindrom
                 do
                 {
                     Console.WriteLine("Введите пятизначное число: ");
-                    number = Convert.ToInt32(Console.ReadLine());
-                    isCorrect = number >= 10000 && number <= 99999;
+                    var res = int.TryParse(Console.ReadLine(), out number);
+                    isCorrect = res && number >= 10000 && number <= 99999;
                 } while (!isCorrect);
 
                 if (IsPalindrom(number))

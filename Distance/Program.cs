@@ -26,8 +26,7 @@ namespace Distance
                 Console.Write("z2 = ");
                 var z2 = Convert.ToInt32(Console.ReadLine());
 
-                var distance = Distance(x1, y1, z1, x2, y2, z2);
-                Console.WriteLine("Расстояние = " + distance);
+                Console.WriteLine("Расстояние = " + Distance(x1, y1, z1, x2, y2, z2));
 
             } while (true);
         }
