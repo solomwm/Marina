@@ -1,0 +1,47 @@
+﻿using System;
+
+namespace Palindrom
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            do
+            {
+                int number;
+                bool isCorrect;
+
+                do
+                {
+                    Console.WriteLine("Введите пятизначное число: ");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    isCorrect = number >= 10000 && number <= 99999;
+                } while (!isCorrect);
+
+                if (IsPalindrom(number))
+                {
+                    Console.WriteLine("Это палиндром");
+                }
+                else
+                {
+                    Console.WriteLine("Это не палиндром");
+                }
+
+            } while (true);
+        }
+
+        static bool IsPalindrom(int number)
+        {
+            var sourceNumber = number;
+            var reverseNumber = number % 10;
+
+            while (sourceNumber / 10 > 0)
+            {
+                sourceNumber /= 10;
+                reverseNumber = reverseNumber * 10 + sourceNumber % 10;
+            }
+
+            return number == reverseNumber;
+        }
+    }
+}
