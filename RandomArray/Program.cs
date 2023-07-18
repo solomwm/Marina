@@ -13,7 +13,7 @@ namespace RandomArray
             {
                 Console.Write("[");
 
-                for (int i = 0; i < array.Length; i++)
+                for (var i = 0; i < array.Length; i++)
                 {
                     array[i] = rnd.Next(1000);
                     Console.Write(array[i] + $"{(i < array.Length - 1 ? ", " : string.Empty)}");

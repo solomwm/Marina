@@ -13,7 +13,7 @@ namespace Cube
                 var number = Convert.ToInt32(Console.ReadLine());
                 var cubeList = new List<string>(number);
 
-                for (int i = 1; i <= number; i++)
+                for (var i = 1; i <= number; i++)
                 {
                     var s = ((int)Math.Pow(i, 3)).ToString();
                     cubeList.Add(s);

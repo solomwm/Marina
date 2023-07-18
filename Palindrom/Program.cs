@@ -18,14 +18,7 @@ namespace Palindrom
                     isCorrect = res && number >= 10000 && number <= 99999;
                 } while (!isCorrect);
 
-                if (IsPalindrom(number))
-                {
-                    Console.WriteLine("Это палиндром");
-                }
-                else
-                {
-                    Console.WriteLine("Это не палиндром");
-                }
+                Console.WriteLine(IsPalindrom(number) ? "Это палиндром" : "Это не палиндром");
 
             } while (true);
         }
